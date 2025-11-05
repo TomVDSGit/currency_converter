@@ -21,5 +21,5 @@ def cli_args():
     parser.add_argument('--mock', '-m', action='store_true',
                         help="Use offline data instead of accessing the API")
 
-    # Parse arguments
+    # Parse arguments to output
     return parser.parse_args()
