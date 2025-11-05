@@ -12,11 +12,12 @@ from pathlib import Path
 
 load_dotenv()
 
+
 def fetch_exchange_rate(base: str, target: str, mock_file: bool = False) -> float:
     """
     Fetch exchange rate from base to target currency.
     """
-    
+
     if mock_file is True:
         try:
             file_path = Path(__file__).parent / "data" / "mock_rates.json"
@@ -49,9 +50,11 @@ def fetch_exchange_rate(base: str, target: str, mock_file: bool = False) -> floa
     try:
         base_rate = response_data["rates"].get(base)
         target_rate = response_data["rates"].get(target)
-        logger.info(f"Fetched exchange rates: {base}={base_rate}, {target}={target_rate}")
+        logger.info(
+            f"Fetched exchange rates: {base}={base_rate}, {target}={target_rate}"
+        )
         return target_rate / base_rate
-    
+
     except requests.RequestException as e:
         print(f"Error fetching exchange rate: {e}")
         logger.critical(f"Error fetching exchange rate: {e}")
