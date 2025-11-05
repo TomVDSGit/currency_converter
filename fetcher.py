@@ -1,12 +1,11 @@
 """
-A fetcher script that fetches exchange rates from an external API.
+A fetcher script that fetches exchange rates from an external API or file.
 """
 
 import os
 import sys
 import json
 import requests
-from dotenv import load_dotenv
 from logger_config import logger
 
 
@@ -24,7 +23,6 @@ def fetch_exchange_rate(base: str, target: str, mock_file: str = None) -> float:
             sys.exit(1)
 
     else:
-        load_dotenv()
         api_key = os.getenv("API_KEY")
         url = f"http://api.exchangeratesapi.io/v1/latest?access_key={api_key}&symbols={base},{target}"
 
