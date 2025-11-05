@@ -7,6 +7,7 @@ import sys
 import requests
 from dotenv import load_dotenv
 from logger_config import logger
+import logger_config as log
 
 def fetch_exchange_rate(base: str, target: str) -> float:
     '''
