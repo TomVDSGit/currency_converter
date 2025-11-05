@@ -6,6 +6,7 @@ import os
 import sys
 import requests
 from dotenv import load_dotenv
+from logger_config import logger
 
 def fetch_exchange_rate(base: str, target: str) -> float:
     '''
@@ -20,10 +21,13 @@ def fetch_exchange_rate(base: str, target: str) -> float:
         data = response.json()
         base_rate = data["rates"].get(base)
         target_rate = data["rates"].get(target)
+        log.logger.info(f"Fetched exchange rates: {base}={base_rate}, {target}={target_rate}")
         return target_rate / base_rate # Returns final converstion rate
     except requests.RequestException as e:
         print(f"Error fetching exchange rate: {e}")
+        log.logger.critical(f"Error fetching exchange rate: {e}")
         sys.exit(1)
     except KeyError:
         print(f"Invalid target currency '{target}' or no rate available.")
+        log.logger.critical(f"Error fetching exchange rate: {e}")
         sys.exit(1)
