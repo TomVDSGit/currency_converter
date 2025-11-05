@@ -7,7 +7,7 @@ from typing import Dict
 '''
 A class to convert currency amounts using exchange rates.
 '''
-def convert(self, amount: float, exchange_rate: float) -> float:
+def convert( amount: float, exchange_rate: float) -> float:
     if amount < 0:
         log.logger.error("Attempted to convert a negative amount")
         raise ValueError("Amount cannot be negative")
