@@ -5,8 +5,9 @@ from cli import cli_args
 import logger_config as log
 from fetcher import fetch_exchange_rate
 from converter import convert
+from dotenv import load_dotenv
 
-logger = logging.getLogger(__name__)
+load_dotenv()
 
 def main():
     """
