@@ -50,6 +50,10 @@ def fetch_exchange_rate(base: str, target: str, mock_file: bool = False) -> floa
     try:
         base_rate = response_data["rates"].get(base)
         target_rate = response_data["rates"].get(target)
+        if base_rate is None or target_rate is None:
+                logger.error("Currency rates not found in data.")
+                raise ValueError("Currency rates not found in data.")
+
         logger.info(
             f"Fetched exchange rates: {base}={base_rate}, {target}={target_rate}"
         )
