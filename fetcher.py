@@ -16,10 +16,16 @@ def fetch_exchange_rate(base: str, target: str, mock_file: bool = False) -> floa
     Fetch exchange rate from base to target currency.
     """
     
-    if mock_file == True:
+    if mock_file is True:
         try:
-            with open(mock_file, 'r') as file:
-                response_data = json.load(file)
+            with open("data/mock_rates.json") as file:
+                data = json.load(file)
+            base_rate = data["rates"].get(base)
+            target_rate = data["rates"].get(target)
+            if base_rate is None or target_rate is None:
+                logger.error("Currency rates not found in mock data.")
+                raise ValueError("Currency rates not found in mock data.")
+            return target_rate / base_rate
         except FileNotFoundError:
             logger.critical(f"Mock file '{mock_file}' not found.")
             sys.exit(1)
