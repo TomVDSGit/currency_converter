@@ -1,22 +1,33 @@
 """
+<<<<<<< HEAD
 A fetcher script that fetches exchange rates from an external API.
+=======
+A fetcher script that fetches exchange rates from an external API or file.
+>>>>>>> 41853e8243ec1d7509f3be62e41c842b4a027391
 """
 
 import os
 import sys
 import json
 import requests
-from dotenv import load_dotenv
 from logger_config import logger
 import logger_config as log
 
 
+<<<<<<< HEAD
 def fetch_exchange_rate(base: str, target: str, mock_file: bool = False) -> float:
+=======
+def fetch_exchange_rate(base: str, target: str, mock_file: str = None) -> float:
+>>>>>>> 41853e8243ec1d7509f3be62e41c842b4a027391
     """
     Fetch exchange rate from base to target currency.
     """
     
+<<<<<<< HEAD
     if mock_file == True:
+=======
+    if mock_file:
+>>>>>>> 41853e8243ec1d7509f3be62e41c842b4a027391
         try:
             with open(mock_file, 'r') as file:
                 response_data = json.load(file)
@@ -25,7 +36,10 @@ def fetch_exchange_rate(base: str, target: str, mock_file: bool = False) -> floa
             sys.exit(1)
 
     else:
+<<<<<<< HEAD
         load_dotenv()
+=======
+>>>>>>> 41853e8243ec1d7509f3be62e41c842b4a027391
         api_key = os.getenv("API_KEY")
         url = f"http://api.exchangeratesapi.io/v1/latest?access_key={api_key}&symbols={base},{target}"
 
