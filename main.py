@@ -12,15 +12,15 @@ def main():
     """
 
     args = cli_args()
-    # probs need log statement
+    log.logger.info(f"Starting conversion: {args.amount} {args.base} to {args.target} (mock={args.mock})")
 
     try:
         c_rate = fetch_exchange_rate(args.base, args.target)#, mock=args.mock) #Conversion Rate
         output = convert(args.amount, c_rate) #Output after conversion
-        # probs need log statement
+        log.logger.info(f"Conversion successful: {args.amount} {args.base} = {output:.4f} {args.target}")
         print(f"Conversion: {args.amount} {args.base} = {output:.4f} {args.target}")
     except Exception as e:
-        # probs need log error statement
+        log.logger.error(f"Error occurred: {e}")
         print(f"Error: {e}")
 
 if __name__ == "__main__":
