@@ -1,0 +1,4 @@
+2025-11-05 14:21:01,777 - logger_config - INFO - 15 - Starting conversion: 200.0 USD to EUR (mock=False)
+2025-11-05 14:21:02,010 - logger_config - INFO - 43 - Fetched exchange rates: USD=1.148396, EUR=1
+2025-11-05 14:21:02,011 - logger_config - INFO - 18 - Converted 200.0 at rate 0.8707797658647366 = 174.16
+2025-11-05 14:21:02,011 - logger_config - INFO - 20 - Conversion successful: 200.0 USD = 174.1600 EUR
