@@ -16,8 +16,13 @@ def fetch_exchange_rate(base: str, target: str, mock_file: str = None) -> float:
     """
     
     if mock_file:
-        with open(mock_file, 'r') as file:
-            response_data = json.load(file)
+        try:
+            with open(mock_file, 'r') as file:
+                response_data = json.load(file)
+        except FileNotFoundError:
+            logger.critical(f"Mock file '{mock_file}' not found.")
+            sys.exit(1)
+
     else:
         load_dotenv()
         api_key = os.getenv("API_KEY")
