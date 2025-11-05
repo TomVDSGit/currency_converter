@@ -7,8 +7,9 @@ import sys
 import json
 import requests
 from logger_config import logger
-import logger_config as log
+from dotenv import load_dotenv
 
+load_dotenv()
 
 def fetch_exchange_rate(base: str, target: str, mock_file: bool = False) -> float:
     """
