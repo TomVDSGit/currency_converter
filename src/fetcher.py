@@ -8,6 +8,7 @@ import json
 import requests
 from logger_config import logger
 from dotenv import load_dotenv
+from pathlib import Path
 
 load_dotenv()
 
@@ -18,7 +19,9 @@ def fetch_exchange_rate(base: str, target: str, mock_file: bool = False) -> floa
     
     if mock_file is True:
         try:
-            with open(r"data\mock_rates.json") as file:
+            file_path = Path(__file__).parent / "data" / "mock_rates.json"
+
+            with file_path.open() as file:
                 data = json.load(file)
             base_rate = data["rates"].get(base)
             target_rate = data["rates"].get(target)

@@ -1,2 +1,5 @@
 2025-11-05 12:27:47,612 - logger_config - CRITICAL - 29 - Error fetching exchange rate: 401 Client Error: Unauthorized for url: http://api.exchangeratesapi.io/v1/latest?access_key=None&symbols=USD,EUR
 2025-11-05 12:28:35,312 - logger_config - CRITICAL - 29 - Error fetching exchange rate: 401 Client Error: Unauthorized for url: http://api.exchangeratesapi.io/v1/latest?access_key=None&symbols=USD,EUR
+2025-11-05 15:32:32,896 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=True)
+2025-11-05 15:32:32,896 - logger_config - INFO - 18 - Converted 200.0 at rate 1.302720143035256 = 260.54
+2025-11-05 15:32:32,911 - logger_config - INFO - 20 - Conversion successful: 200.0 GBP = 260.5400 USD
