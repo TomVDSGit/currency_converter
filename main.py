@@ -6,8 +6,6 @@ import logger_config as log
 from fetcher import fetch_exchange_rate
 from converter import convert
 
-logger = logging.getLogger(__name__)
-
 def main():
     """
     Function to run the other functions for the required converting functionality
@@ -24,7 +22,7 @@ def main():
     except Exception as e:
         log.logger.error(f"Error occurred: {e}")
         print(f"Error: {e}")
-        logger.info("Currency converter application terminated with errors")
+        log.logger.info("Currency converter application terminated with errors")
 
 if __name__ == "__main__":
     main()
