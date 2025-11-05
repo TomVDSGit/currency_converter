@@ -3,7 +3,7 @@ Script to run convert currencies based on command line inputs
 """
 
 from cli import cli_args
-import logger_config as log
+from logger_config import logger
 from fetcher import fetch_exchange_rate
 from converter import convert
 
@@ -28,9 +28,9 @@ def main():
         )
         print(f"Conversion: {args.amount} {args.base} = {output:.4f} {args.target}")
     except Exception as e:
-        log.logger.error(f"Error occurred: {e}")
+        logger.error(f"Error occurred: {e}")
         print(f"Error: {e}")
-        log.logger.info("Currency converter application terminated with errors")
+        logger.info("Currency converter application terminated with errors")
 
 
 if __name__ == "__main__":
