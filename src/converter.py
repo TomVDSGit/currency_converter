@@ -5,7 +5,7 @@ A script that converts currency amounts using fetched exchange rates from fetche
 from logger_config import logger
 from typing import Dict
 
-
+                                                                
 '''
 A class to convert currency amounts using exchange rates.
 '''
