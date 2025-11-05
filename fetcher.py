@@ -20,7 +20,7 @@ def fetch_exchange_rate(base: str, target: str) -> float:
         data = response.json()
         base_rate = data["rates"].get(base)
         target_rate = data["rates"].get(target)
-        return target_rate, base_rate # Returns target and base rates
+        return target_rate / base_rate # Returns final converstion rate
     except requests.RequestException as e:
         print(f"Error fetching exchange rate: {e}")
         sys.exit(1)
