@@ -1,10 +1,16 @@
-import requests
-import sys
+'''
+A fetcher script that fetches exchange rates from an external API.
+'''
+
 import os
+import sys
+import requests
 from dotenv import load_dotenv
 
-
 def fetch_exchange_rate(base: str, target: str) -> float:
+    '''
+    Fetch exchange rate from base to target currency.
+    '''
     # Accessing API key from .env file
     load_dotenv()
     api_key = os.getenv("API_KEY")
