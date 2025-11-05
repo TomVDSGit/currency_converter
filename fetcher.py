@@ -11,9 +11,8 @@ def fetch_exchange_rate(base: str, target: str) -> float:
     '''
     Fetch exchange rate from base to target currency.
     '''
-    # Accessing API key from .env file
     load_dotenv()
-    api_key = os.getenv("API_KEY")
+    api_key = os.getenv("API_KEY") # Accessing API key from .env file
     url = f"http://api.exchangeratesapi.io/v1/latest?access_key={api_key}&symbols={base},{target}"
     try:
         response = requests.get(url)
@@ -21,7 +20,7 @@ def fetch_exchange_rate(base: str, target: str) -> float:
         data = response.json()
         base_rate = data["rates"].get(base)
         target_rate = data["rates"].get(target)
-        return target_rate / base_rate
+        return target_rate, base_rate # Returns target and base rates
     except requests.RequestException as e:
         print(f"Error fetching exchange rate: {e}")
         sys.exit(1)
