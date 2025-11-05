@@ -18,7 +18,7 @@ def cli_args():
                         help="Enter the currency you want to convert to e.g EUR")
     parser.add_argument('--amount', '-a', nargs='?', default=100, type=float,
                         help="Enter the amount of base currency you want to convert e.g 100")
-    parser.add_argument('--mock', '-m', action='store_true', 
+    parser.add_argument('--mock', '-m', action='store_true',
                         help="Use offline data instead of accessing the API")
 
     # Parse arguments
