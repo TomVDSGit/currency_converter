@@ -1,2 +1,4 @@
 2025-11-05 12:27:47,612 - logger_config - CRITICAL - 29 - Error fetching exchange rate: 401 Client Error: Unauthorized for url: http://api.exchangeratesapi.io/v1/latest?access_key=None&symbols=USD,EUR
 2025-11-05 12:28:35,312 - logger_config - CRITICAL - 29 - Error fetching exchange rate: 401 Client Error: Unauthorized for url: http://api.exchangeratesapi.io/v1/latest?access_key=None&symbols=USD,EUR
+2025-11-05 13:59:31,321 - logger_config - INFO - 15 - Starting conversion: 100.0 USD to EUR (mock=False)
+2025-11-05 13:59:31,542 - logger_config - CRITICAL - 36 - Error fetching exchange rate: 401 Client Error: Unauthorized for url: http://api.exchangeratesapi.io/v1/latest?access_key=None&symbols=USD,EUR

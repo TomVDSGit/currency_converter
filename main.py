@@ -17,7 +17,7 @@ def main():
     log.logger.info(f"Starting conversion: {args.amount} {args.base} to {args.target} (mock={args.mock})")
 
     try:
-        c_rate = fetch_exchange_rate(args.base, args.target)#, mock=args.mock) #Conversion Rate
+        c_rate = fetch_exchange_rate(args.base, args.target, args.mock) #Conversion Rate
         output = convert(args.amount, c_rate) #Output after conversion
         log.logger.info(f"Conversion successful: {args.amount} {args.base} = {output:.4f} {args.target}")
         print(f"Conversion: {args.amount} {args.base} = {output:.4f} {args.target}")
