@@ -14,7 +14,7 @@ def main():
     """
 
     args = cli_args()
-    log.logger.info(
+    logger.info(
         f"Starting conversion: {args.amount} {args.base} to {args.target} (mock={args.mock})"
     )
 
@@ -23,7 +23,7 @@ def main():
             args.base, args.target, args.mock
         )  # Conversion Rate
         output = convert(args.amount, c_rate)  # Output after conversion
-        log.logger.info(
+        logger.info(
             f"Conversion successful: {args.amount} {args.base} = {output:.4f} {args.target}"
         )
         print(f"Conversion: {args.amount} {args.base} = {output:.4f} {args.target}")
