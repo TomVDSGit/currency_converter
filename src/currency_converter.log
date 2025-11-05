@@ -2,3 +2,29 @@
 2025-11-05 14:21:02,010 - logger_config - INFO - 43 - Fetched exchange rates: USD=1.148396, EUR=1
 2025-11-05 14:21:02,011 - logger_config - INFO - 18 - Converted 200.0 at rate 0.8707797658647366 = 174.16
 2025-11-05 14:21:02,011 - logger_config - INFO - 20 - Conversion successful: 200.0 USD = 174.1600 EUR
+2025-11-05 14:57:06,001 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=False)
+2025-11-05 14:57:06,218 - logger_config - INFO - 49 - Fetched exchange rates: GBP=0.881365, USD=1.148336
+2025-11-05 14:57:06,234 - logger_config - INFO - 18 - Converted 200.0 at rate 1.3029062874064663 = 260.58
+2025-11-05 14:57:06,234 - logger_config - INFO - 20 - Conversion successful: 200.0 GBP = 260.5800 USD
+2025-11-05 14:57:15,229 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=True)
+2025-11-05 14:57:15,229 - logger_config - CRITICAL - 30 - Mock file 'True' not found.
+2025-11-05 14:57:40,581 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to PKR (mock=False)
+2025-11-05 14:57:40,812 - logger_config - INFO - 49 - Fetched exchange rates: GBP=0.881365, PKR=324.559655
+2025-11-05 14:57:40,812 - logger_config - INFO - 18 - Converted 200.0 at rate 368.24658909759296 = 73649.32
+2025-11-05 14:57:40,812 - logger_config - INFO - 20 - Conversion successful: 200.0 GBP = 73649.3200 PKR
+2025-11-05 14:58:20,712 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=True)
+2025-11-05 14:58:20,712 - logger_config - CRITICAL - 30 - Mock file 'True' not found.
+2025-11-05 15:00:30,799 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=True)
+2025-11-05 15:00:30,799 - logger_config - CRITICAL - 30 - Mock file not found.
+2025-11-05 15:02:22,720 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=True)
+2025-11-05 15:02:22,720 - logger_config - CRITICAL - 30 - Mock file not found.
+2025-11-05 15:06:06,503 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=True)
+2025-11-05 15:06:06,503 - logger_config - CRITICAL - 30 - Mock file not found.
+2025-11-05 15:06:23,530 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=True)
+2025-11-05 15:06:23,530 - logger_config - INFO - 18 - Converted 200.0 at rate 1.302720143035256 = 260.54
+2025-11-05 15:06:23,530 - logger_config - INFO - 20 - Conversion successful: 200.0 GBP = 260.5400 USD
+2025-11-05 15:10:22,833 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=True)
+2025-11-05 15:10:22,833 - logger_config - CRITICAL - 30 - Mock file not found.
+2025-11-05 15:10:30,575 - logger_config - INFO - 15 - Starting conversion: 200.0 GBP to USD (mock=True)
+2025-11-05 15:10:30,575 - logger_config - INFO - 18 - Converted 200.0 at rate 1.302720143035256 = 260.54
+2025-11-05 15:10:30,575 - logger_config - INFO - 20 - Conversion successful: 200.0 GBP = 260.5400 USD
